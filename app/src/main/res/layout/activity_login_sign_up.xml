@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginSignUpActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/loginImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/login_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginImage">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/loginScreen"
+            android:visibility="visible">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Username"
+                android:id="@+id/loginUsername"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="18dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                app:passwordToggleEnabled="true"
+                android:id="@+id/loginPassword"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="login"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                app:backgroundTint="#355F2E"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="18dp"
+                app:cornerRadius="20dp"
+                app:rippleColor="#60AC54"
+                android:id="@+id/loginButton"
+                 />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? Register"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/signupScreen"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Username"
+                android:id="@+id/signupUsername"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Email"
+                android:id="@+id/signupEmail"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Phone"
+                android:id="@+id/signupPhone"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="18dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                app:passwordToggleEnabled="true"
+                android:id="@+id/signupPassword"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="register"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                app:backgroundTint="#355F2E"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="18dp"
+                app:cornerRadius="20dp"
+                app:rippleColor="#60AC54"
+                android:id="@+id/signupButton"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? Login"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
